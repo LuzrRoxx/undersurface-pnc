@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://b6k0cee0ro20e"]
 
 [ext_resource type="Texture2D" uid="uid://chioducn15pdg" path="res://Art/Debugging/scene1.png" id="1_qmk7m"]
+[ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="3_1a1eo"]
 
 [node name="Node2D" type="Node2D" unique_id=1081602961]
 
 [node name="Scene1" type="Sprite2D" parent="." unique_id=1571899759]
 position = Vector2(960, 540)
 texture = ExtResource("1_qmk7m")
+
+[node name="button1" parent="." unique_id=705109945 instance=ExtResource("3_1a1eo")]
+position = Vector2(311, 205)
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" parent="button1" index="0" unique_id=516137140]
+target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene2Debug.tscn"
+
+[editable path="button1"]
