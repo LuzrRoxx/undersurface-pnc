@@ -16,7 +16,4 @@ scale = Vector2(20.185, 7.275)
 [node name="Area2D" parent="Node2D" index="0" unique_id=516137140]
 target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene1Debug.tscn"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2069921702]
-position = Vector2(960, 540)
-
 [editable path="Node2D"]
