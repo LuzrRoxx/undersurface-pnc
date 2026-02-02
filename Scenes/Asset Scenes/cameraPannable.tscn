@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dphrm6i55ghng"]
 
 [ext_resource type="Script" uid="uid://wkwlde0hsqle" path="res://Scenes/Asset Scenes/camera_pannable.gd" id="1_vbgi6"]
+[ext_resource type="Texture2D" uid="uid://cp1yge2o1epdi" path="res://Scenes/Asset Scenes/crosshair.png" id="2_x402p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x402p"]
 size = Vector2(120, 1080)
@@ -26,6 +27,9 @@ position = Vector2(-900, 0)
 
 [node name="John" type="CollisionShape2D" parent="Camera2D/leftArea" unique_id=248728931]
 shape = SubResource("RectangleShape2D_vbgi6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1906930251]
+texture = ExtResource("2_x402p")
 
 [connection signal="mouse_entered" from="Camera2D/rightArea" to="Camera2D" method="_on_right_area_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/rightArea" to="Camera2D" method="_on_right_area_mouse_exited"]

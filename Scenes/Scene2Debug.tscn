@@ -19,8 +19,7 @@ target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene1Debug.tsc
 [node name="Node2D2" parent="." unique_id=1803773333 instance=ExtResource("3_6fnys")]
 
 [node name="Camera2D" parent="Node2D2" index="0" unique_id=1964069265]
-rightLimit = 900.0
-leftLimit = -900.0
+rightLimit = 960.0
 speed = 500.0
 
 [editable path="Node2D"]
