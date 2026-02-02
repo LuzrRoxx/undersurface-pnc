@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dphrm6i55ghng"]
+
+[ext_resource type="Script" uid="uid://wkwlde0hsqle" path="res://Scenes/Asset Scenes/camera_pannable.gd" id="1_vbgi6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x402p"]
+size = Vector2(120, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbgi6"]
+size = Vector2(122, 1080)
+
+[node name="Camera2D" type="Camera2D" unique_id=1964069265]
+script = ExtResource("1_vbgi6")
+
+[node name="rightArea" type="Area2D" parent="." unique_id=762222228]
+unique_name_in_owner = true
+position = Vector2(900, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightArea" unique_id=857196749]
+shape = SubResource("RectangleShape2D_x402p")
+
+[node name="leftArea" type="Area2D" parent="." unique_id=1380418916]
+unique_name_in_owner = true
+position = Vector2(-900, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftArea" unique_id=248728931]
+shape = SubResource("RectangleShape2D_vbgi6")
+
+[connection signal="mouse_entered" from="rightArea" to="." method="_on_right_area_mouse_entered"]
+[connection signal="mouse_exited" from="rightArea" to="." method="_on_right_area_mouse_exited"]
+[connection signal="mouse_entered" from="leftArea" to="." method="_on_left_area_mouse_entered"]
+[connection signal="mouse_exited" from="leftArea" to="." method="_on_left_area_mouse_exited"]
