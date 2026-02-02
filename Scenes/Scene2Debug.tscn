@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dgt735654fidy" path="res://Art/Debugging/scene2.png" id="1_ul3tw"]
 [ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="2_gty4v"]
+[ext_resource type="PackedScene" uid="uid://dphrm6i55ghng" path="res://Scenes/Asset Scenes/cameraPannable.tscn" id="3_6fnys"]
 
 [node name="Node2D" type="Node2D" unique_id=2091835540]
 
@@ -16,4 +17,9 @@ scale = Vector2(20.185, 7.275)
 [node name="Area2D" parent="Node2D" index="0" unique_id=516137140]
 target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene1Debug.tscn"
 
+[node name="Camera2D" parent="." unique_id=1964069265 instance=ExtResource("3_6fnys")]
+position = Vector2(961, 540)
+rightLimit = 900.0
+
 [editable path="Node2D"]
+[editable path="Camera2D"]

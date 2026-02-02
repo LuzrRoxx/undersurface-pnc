@@ -10,20 +10,6 @@ extends Camera2D
 var moving_left: bool = false
 var moving_right: bool = false
 
-
-func _on_right_area_mouse_entered() -> void:
-	if global_position.x < rightLimit:
-		moving_right = true
-func _on_right_area_mouse_exited() -> void:
-	if global_position.x < rightLimit:
-		moving_left = false
-func _on_left_area_mouse_entered() -> void:
-	if global_position.x < leftLimit:
-		moving_right = true
-func _on_left_area_mouse_exited() -> void:
-	if global_position.x < leftLimit:
-		moving_left = false
-
 func _process(delta):
 	var pos = global_position
 	
@@ -33,7 +19,7 @@ func _process(delta):
 			pos.x = rightLimit
 			moving_right = false
 			rightArea.disabled = true
-		leftArea.disabled
+
 		
 	elif moving_left:
 		pos.x -= speed * delta
@@ -41,5 +27,18 @@ func _process(delta):
 			pos.x = leftLimit
 			moving_left = false
 			leftArea.disabled = true
-		rightArea.disabled
+
 		
+func _on_right_area_mouse_entered() -> void:
+	if global_position.x < rightLimit:
+		print("right_entered")
+		moving_right = true
+func _on_right_area_mouse_exited() -> void:
+	if global_position.x < rightLimit:
+		moving_right = false
+func _on_left_area_mouse_entered() -> void:
+	if global_position.x > leftLimit:
+		moving_left = true
+func _on_left_area_mouse_exited() -> void:
+	if global_position.x > leftLimit:
+		moving_left = false
