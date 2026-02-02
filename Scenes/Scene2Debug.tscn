@@ -7,19 +7,21 @@
 [node name="Node2D" type="Node2D" unique_id=2091835540]
 
 [node name="Scene2" type="Sprite2D" parent="." unique_id=2099050655]
-position = Vector2(960, 540)
 texture = ExtResource("1_ul3tw")
 
 [node name="Node2D" parent="." unique_id=705109945 instance=ExtResource("2_gty4v")]
-position = Vector2(323.00003, 201)
+position = Vector2(-637, -339)
 scale = Vector2(20.185, 7.275)
 
 [node name="Area2D" parent="Node2D" index="0" unique_id=516137140]
 target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene1Debug.tscn"
 
-[node name="Camera2D" parent="." unique_id=1964069265 instance=ExtResource("3_6fnys")]
-position = Vector2(961, 540)
+[node name="Node2D2" parent="." unique_id=1803773333 instance=ExtResource("3_6fnys")]
+
+[node name="Camera2D" parent="Node2D2" index="0" unique_id=1964069265]
 rightLimit = 900.0
+leftLimit = -900.0
+speed = 500.0
 
 [editable path="Node2D"]
-[editable path="Camera2D"]
+[editable path="Node2D2"]

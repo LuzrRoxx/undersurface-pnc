@@ -10,6 +10,12 @@ extends Camera2D
 var moving_left: bool = false
 var moving_right: bool = false
 
+@onready var leftCollision = %leftArea/John
+@onready var rightCollision = %rightArea/CollisionShape2D
+
+func _ready():
+	pass
+
 func _process(delta):
 	var pos = global_position
 	
@@ -18,20 +24,18 @@ func _process(delta):
 		if pos.x >= rightLimit:
 			pos.x = rightLimit
 			moving_right = false
-			rightArea.disabled = true
-
 		
 	elif moving_left:
 		pos.x -= speed * delta
 		if pos.x <= leftLimit:
 			pos.x = leftLimit
 			moving_left = false
-			leftArea.disabled = true
 
+	global_position = pos
 		
 func _on_right_area_mouse_entered() -> void:
 	if global_position.x < rightLimit:
-		print("right_entered")
+		print("rightentered")
 		moving_right = true
 func _on_right_area_mouse_exited() -> void:
 	if global_position.x < rightLimit:
