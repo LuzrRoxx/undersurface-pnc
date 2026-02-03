@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chioducn15pdg" path="res://Art/Debugging/scene1.png" id="1_qmk7m"]
 [ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="3_1a1eo"]
-[ext_resource type="PackedScene" uid="uid://0jg2vasolu41" path="res://Scenes/Asset Scenes/camerabasic.tscn" id="3_42jmb"]
+[ext_resource type="PackedScene" uid="uid://0jg2vasolu41" path="res://Scenes/Asset Scenes/cameraBasic.tscn" id="3_42jmb"]
 
 [node name="Node2D" type="Node2D" unique_id=1081602961]
 

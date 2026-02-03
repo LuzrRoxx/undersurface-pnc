@@ -13,6 +13,8 @@ size = Vector2(122, 1080)
 [node name="Node2D" type="Node2D" unique_id=1803773333]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1964069265]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 script = ExtResource("1_vbgi6")
 
 [node name="rightArea" type="Area2D" parent="Camera2D" unique_id=762222228]
@@ -37,6 +39,17 @@ shape = SubResource("RectangleShape2D_vbgi6")
 texture = ExtResource("2_x402p")
 
 [node name="Control" parent="Camera2D" unique_id=1446918178 instance=ExtResource("3_b7gy3")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="mouse_entered" from="Camera2D/rightArea" to="Camera2D" method="_on_right_area_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/rightArea" to="Camera2D" method="_on_right_area_mouse_exited"]

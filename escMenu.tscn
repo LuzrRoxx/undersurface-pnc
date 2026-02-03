@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mc8km7ngsulg"]
 
 [ext_resource type="Script" uid="uid://kedfnik37tg3" path="res://escMenu.gd" id="1_ee7bu"]
+[ext_resource type="Texture2D" uid="uid://bi7k6xeprl3l0" path="res://icon.svg" id="2_wwh61"]
 
 [node name="Control" type="Control" unique_id=1446918178]
 layout_mode = 3
@@ -20,4 +21,13 @@ script = ExtResource("1_ee7bu")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
 text = "if you see this, the control is VISIBLE"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=260998695]
+layout_mode = 0
+offset_top = 18.0
+offset_right = 128.0
+offset_bottom = 146.0
+texture = ExtResource("2_wwh61")
