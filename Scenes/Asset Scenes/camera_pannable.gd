@@ -17,16 +17,23 @@ func _ready():
 	pass
 
 func _process(delta):
+	var viewportSize = get_viewport().get_visible_rect().size
+	var center = viewportSize / 2
+	var mousePos = get_viewport().get_mouse_position()
 	var pos = global_position
+	var distance = center.distance_to(mousePos)
+	var maxDistance = center.length()
+	var norDistance = distance / maxDistance
+	var mulDistance = norDistance * 1.75
 	
 	if moving_right:
-		pos.x += speed * delta
+		pos.x += speed * mulDistance * delta
 		if pos.x >= rightLimit:
 			pos.x = rightLimit
 			moving_right = false
 		
 	elif moving_left:
-		pos.x -= speed * delta
+		pos.x -= speed * mulDistance * delta
 		if pos.x <= leftLimit:
 			pos.x = leftLimit
 			moving_left = false

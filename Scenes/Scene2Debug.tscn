@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="2_gty4v"]
 [ext_resource type="PackedScene" uid="uid://dphrm6i55ghng" path="res://Scenes/Asset Scenes/cameraPannable.tscn" id="3_6fnys"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6fnys"]
+load_path = "res://.godot/imported/crosshair.png-6967cff79a27f6f26a7c2577a1ada30a.ctex"
+
 [node name="Node2D" type="Node2D" unique_id=2091835540]
 
 [node name="Scene2" type="Sprite2D" parent="." unique_id=2099050655]
@@ -21,6 +24,9 @@ target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene1Debug.tsc
 [node name="Camera2D" parent="Node2D2" index="0" unique_id=1964069265]
 rightLimit = 960.0
 speed = 500.0
+
+[node name="Sprite2D" parent="Node2D2/Camera2D" index="2" unique_id=1906930251]
+texture = SubResource("CompressedTexture2D_6fnys")
 
 [editable path="Node2D"]
 [editable path="Node2D2"]

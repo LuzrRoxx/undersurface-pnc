@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dphrm6i55ghng"]
 
 [ext_resource type="Script" uid="uid://wkwlde0hsqle" path="res://Scenes/Asset Scenes/camera_pannable.gd" id="1_vbgi6"]
-[ext_resource type="Texture2D" uid="uid://cp1yge2o1epdi" path="res://Scenes/Asset Scenes/crosshair.png" id="2_x402p"]
+[ext_resource type="Texture2D" uid="uid://jvpptel155o3" path="res://Scenes/Asset Scenes/crosshair.png" id="2_x402p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x402p"]
 size = Vector2(120, 1080)
@@ -19,6 +19,8 @@ unique_name_in_owner = true
 position = Vector2(900, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/rightArea" unique_id=857196749]
+position = Vector2(-180, 0)
+scale = Vector2(4, 1)
 shape = SubResource("RectangleShape2D_x402p")
 
 [node name="leftArea" type="Area2D" parent="Camera2D" unique_id=1380418916]
@@ -26,6 +28,8 @@ unique_name_in_owner = true
 position = Vector2(-900, 0)
 
 [node name="John" type="CollisionShape2D" parent="Camera2D/leftArea" unique_id=248728931]
+position = Vector2(184, 0)
+scale = Vector2(4, 1)
 shape = SubResource("RectangleShape2D_vbgi6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1906930251]
