@@ -28,11 +28,5 @@ speed = 500.0
 [node name="Sprite2D" parent="Node2D2/Camera2D" index="2" unique_id=1906930251]
 texture = SubResource("CompressedTexture2D_6fnys")
 
-[node name="Control" parent="Node2D2/Camera2D" index="3" unique_id=1446918178]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
-
 [editable path="Node2D"]
 [editable path="Node2D2"]
