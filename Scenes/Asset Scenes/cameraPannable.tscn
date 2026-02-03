@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wkwlde0hsqle" path="res://Scenes/Asset Scenes/camera_pannable.gd" id="1_vbgi6"]
 [ext_resource type="Texture2D" uid="uid://jvpptel155o3" path="res://Scenes/Asset Scenes/crosshair.png" id="2_x402p"]
+[ext_resource type="PackedScene" uid="uid://mc8km7ngsulg" path="res://escMenu.tscn" id="3_b7gy3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x402p"]
 size = Vector2(120, 1080)
@@ -34,6 +35,8 @@ shape = SubResource("RectangleShape2D_vbgi6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1906930251]
 texture = ExtResource("2_x402p")
+
+[node name="Control" parent="Camera2D" unique_id=1446918178 instance=ExtResource("3_b7gy3")]
 
 [connection signal="mouse_entered" from="Camera2D/rightArea" to="Camera2D" method="_on_right_area_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/rightArea" to="Camera2D" method="_on_right_area_mouse_exited"]
