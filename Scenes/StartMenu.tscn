@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c36fwg12iauk5"]
+
+[node name="Node2D" type="Node2D" unique_id=1883745856]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=12841945]
+
+[node name="Control" type="Control" parent="." unique_id=558396562]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="Button" type="Button" parent="Control" unique_id=247426442]
+layout_mode = 0
+offset_top = 212.0
+offset_right = 740.0
+offset_bottom = 284.0
+text = "Start"
