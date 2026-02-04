@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c36fwg12iauk5"]
 
+[ext_resource type="Script" uid="uid://c5t12yk1u54bh" path="res://Scenes/startButton.gd" id="1_dvnd1"]
+
 [node name="Node2D" type="Node2D" unique_id=1883745856]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=12841945]
@@ -18,3 +20,6 @@ offset_top = 212.0
 offset_right = 740.0
 offset_bottom = 284.0
 text = "Start"
+script = ExtResource("1_dvnd1")
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
