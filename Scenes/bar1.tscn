@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cv268v4l5w85s"]
+
+[ext_resource type="Texture2D" uid="uid://di78mtihgdb51" path="res://Art/bar1.png" id="1_exs2p"]
+[ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="2_rm5ep"]
+[ext_resource type="Script" uid="uid://csc303e66qp6b" path="res://Scripts/reusablebutton1.gd" id="3_o3ilr"]
+[ext_resource type="PackedScene" uid="uid://0jg2vasolu41" path="res://Scenes/Asset Scenes/cameraBasic.tscn" id="4_wi3ev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jti6e"]
+size = Vector2(14.470406, 30.821535)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kupnh"]
+size = Vector2(87.09459, 14.957508)
+
+[node name="Node2D" type="Node2D" unique_id=627571783]
+
+[node name="Bar1" type="Sprite2D" parent="." unique_id=1717014357]
+position = Vector2(960, 540)
+texture = ExtResource("1_exs2p")
+
+[node name="button1" parent="." unique_id=705109945 instance=ExtResource("2_rm5ep")]
+position = Vector2(311, 205)
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" parent="button1" index="0" unique_id=516137140]
+target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene2Debug.tscn"
+
+[node name="CollisionShape2D" parent="button1/Area2D" index="0" unique_id=89010814]
+position = Vector2(18.57564, 36.37395)
+shape = SubResource("RectangleShape2D_jti6e")
+
+[node name="button2" type="Node2D" parent="." unique_id=1710132382]
+position = Vector2(311, 205)
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" type="Area2D" parent="button2" unique_id=152250001]
+script = ExtResource("3_o3ilr")
+target_scene = "res://Scenes/bar2.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button2/Area2D" unique_id=1949538361]
+position = Vector2(29.43978, 91.671394)
+shape = SubResource("RectangleShape2D_kupnh")
+
+[node name="Camera2D" parent="." unique_id=1663485095 instance=ExtResource("4_wi3ev")]
+position = Vector2(960, 540)
+
+[connection signal="mouse_entered" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_exited"]
+
+[editable path="button1"]
