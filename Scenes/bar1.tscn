@@ -22,7 +22,7 @@ position = Vector2(311, 205)
 scale = Vector2(22.045, 8.825)
 
 [node name="Area2D" parent="button1" index="0" unique_id=516137140]
-target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene2Debug.tscn"
+target_scene = "res://Scenes/hallenter.tscn"
 
 [node name="CollisionShape2D" parent="button1/Area2D" index="0" unique_id=89010814]
 position = Vector2(18.57564, 36.37395)
