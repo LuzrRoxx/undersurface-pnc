@@ -9,7 +9,7 @@
 size = Vector2(14.470406, 30.821535)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kupnh"]
-size = Vector2(87.09459, 14.957508)
+size = Vector2(87.09459, 18.356943)
 
 [node name="Node2D" type="Node2D" unique_id=627571783]
 
@@ -37,7 +37,7 @@ script = ExtResource("3_o3ilr")
 target_scene = "res://Scenes/bar2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button2/Area2D" unique_id=1949538361]
-position = Vector2(29.43978, 91.671394)
+position = Vector2(29.43978, 89.97168)
 shape = SubResource("RectangleShape2D_kupnh")
 
 [node name="Camera2D" parent="." unique_id=1663485095 instance=ExtResource("4_wi3ev")]

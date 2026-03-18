@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://blnfqv1oc55ug" path="res://Art/hallenter.png" id="1_5buwx"]
 [ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="2_iee5a"]
 [ext_resource type="PackedScene" uid="uid://dphrm6i55ghng" path="res://Scenes/Asset Scenes/cameraPannable.tscn" id="3_ou71f"]
+[ext_resource type="Texture2D" uid="uid://smn30lgi5knp" path="res://Scenes/arrow.png" id="4_iee5a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw7pc"]
-size = Vector2(36.314102, 97.45705)
+size = Vector2(23.581871, 148.45361)
 
 [node name="Node2D" type="Node2D" unique_id=2091835540]
 
@@ -17,10 +18,10 @@ position = Vector2(-637, -339)
 scale = Vector2(20.185, 7.275)
 
 [node name="Area2D" parent="Node2D" index="0" unique_id=516137140]
-target_scene = "C:/Users/srlwa/Documents/undersurface-pnc/Scenes/Scene1Debug.tscn"
+target_scene = "res://Scenes/halll1.tscn"
 
 [node name="CollisionShape2D" parent="Node2D/Area2D" index="0" unique_id=89010814]
-position = Vector2(-31.335152, 44.329906)
+position = Vector2(-37.701263, 46.597942)
 shape = SubResource("RectangleShape2D_xw7pc")
 
 [node name="Node2D2" parent="." unique_id=1803773333 instance=ExtResource("3_ou71f")]
@@ -29,6 +30,11 @@ shape = SubResource("RectangleShape2D_xw7pc")
 rightLimit = 900.0
 leftLimit = -900.0
 speed = 500.0
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1700607098]
+position = Vector2(-1398, 0)
+rotation = -1.5707964
+texture = ExtResource("4_iee5a")
 
 [editable path="Node2D"]
 [editable path="Node2D2"]
