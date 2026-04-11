@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dj1aj8my0pcyb"]
+
+[ext_resource type="Script" uid="uid://csc303e66qp6b" path="res://Scripts/reusablebutton1.gd" id="2_ce6es"]
+[ext_resource type="PackedScene" uid="uid://0jg2vasolu41" path="res://Scenes/Asset Scenes/cameraBasic.tscn" id="3_h7wd6"]
+[ext_resource type="PackedScene" uid="uid://mc8km7ngsulg" path="res://escMenu.tscn" id="4_lc082"]
+[ext_resource type="Texture2D" uid="uid://mrpwicw2gkhh" path="res://Scenes/hallLadder.png" id="5_alwkg"]
+[ext_resource type="Texture2D" uid="uid://smn30lgi5knp" path="res://Art/arrow.png" id="5_nm03v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23hbq"]
+size = Vector2(87.09459, 18.017)
+
+[node name="Node2D" type="Node2D" unique_id=627571783]
+
+[node name="HallLadder" type="Sprite2D" parent="." unique_id=543847333]
+position = Vector2(960, 540)
+texture = ExtResource("5_alwkg")
+
+[node name="button2" type="Node2D" parent="." unique_id=1710132382]
+position = Vector2(311, 205)
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" type="Area2D" parent="button2" unique_id=152250001]
+script = ExtResource("2_ce6es")
+target_scene = "res://Scenes/halll1.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button2/Area2D" unique_id=1949538361]
+position = Vector2(29.43978, 90.141655)
+shape = SubResource("RectangleShape2D_23hbq")
+
+[node name="Camera2D" parent="." unique_id=1663485095 instance=ExtResource("3_h7wd6")]
+position = Vector2(960, 540)
+
+[node name="Control" parent="." unique_id=1446918178 instance=ExtResource("4_lc082")]
+anchors_preset = 15
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=427980757]
+position = Vector2(960, 1001)
+rotation = 3.1415927
+texture = ExtResource("5_nm03v")
+
+[connection signal="mouse_entered" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_exited"]

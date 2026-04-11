@@ -3,10 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://blnfqv1oc55ug" path="res://Art/hallenter.png" id="1_5buwx"]
 [ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="2_iee5a"]
 [ext_resource type="PackedScene" uid="uid://dphrm6i55ghng" path="res://Scenes/Asset Scenes/cameraPannable.tscn" id="3_ou71f"]
-[ext_resource type="Texture2D" uid="uid://smn30lgi5knp" path="res://Scenes/arrow.png" id="4_iee5a"]
+[ext_resource type="Texture2D" uid="uid://smn30lgi5knp" path="res://Art/arrow.png" id="4_iee5a"]
+[ext_resource type="Script" uid="uid://csc303e66qp6b" path="res://Scripts/reusablebutton1.gd" id="5_ou71f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw7pc"]
 size = Vector2(23.581871, 148.45361)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjwij"]
+size = Vector2(87.09459, 18.017)
 
 [node name="Node2D" type="Node2D" unique_id=2091835540]
 
@@ -35,6 +39,27 @@ speed = 500.0
 position = Vector2(-1398, 0)
 rotation = -1.5707964
 texture = ExtResource("4_iee5a")
+
+[node name="button2" type="Node2D" parent="Arrow" unique_id=2062771978]
+position = Vector2(335.01904, 749.5676)
+rotation = 1.5707964
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" type="Area2D" parent="Arrow/button2" unique_id=1063144376]
+script = ExtResource("5_ou71f")
+target_scene = "res://Scenes/bar1.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/button2/Area2D" unique_id=898328232]
+position = Vector2(29.43978, 90.141655)
+shape = SubResource("RectangleShape2D_qjwij")
+
+[node name="Arrow" type="Sprite2D" parent="Arrow" unique_id=1924731389]
+position = Vector2(-461.00012, 1399)
+rotation = -1.5707964
+texture = ExtResource("4_iee5a")
+
+[connection signal="mouse_entered" from="Arrow/button2/Area2D" to="Arrow/button2/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Arrow/button2/Area2D" to="Arrow/button2/Area2D" method="_on_mouse_exited"]
 
 [editable path="Node2D"]
 [editable path="Node2D2"]

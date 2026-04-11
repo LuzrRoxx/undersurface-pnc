@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://mrp2pxvjuqrs" path="res://Scenes/Asset Scenes/reusablebutton1.tscn" id="2_rm5ep"]
 [ext_resource type="Script" uid="uid://csc303e66qp6b" path="res://Scripts/reusablebutton1.gd" id="3_o3ilr"]
 [ext_resource type="PackedScene" uid="uid://0jg2vasolu41" path="res://Scenes/Asset Scenes/cameraBasic.tscn" id="4_wi3ev"]
+[ext_resource type="PackedScene" uid="uid://mc8km7ngsulg" path="res://escMenu.tscn" id="5_rm5ep"]
+[ext_resource type="Texture2D" uid="uid://smn30lgi5knp" path="res://Art/arrow.png" id="6_o3ilr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jti6e"]
 size = Vector2(14.470406, 30.821535)
@@ -42,6 +44,18 @@ shape = SubResource("RectangleShape2D_kupnh")
 
 [node name="Camera2D" parent="." unique_id=1663485095 instance=ExtResource("4_wi3ev")]
 position = Vector2(960, 540)
+
+[node name="Control" parent="." unique_id=1446918178 instance=ExtResource("5_rm5ep")]
+anchors_preset = 15
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1923035952]
+position = Vector2(721, 526)
+texture = ExtResource("6_o3ilr")
+
+[node name="Arrow" type="Sprite2D" parent="Arrow" unique_id=443040535]
+position = Vector2(239, 473)
+rotation = 3.1415927
+texture = ExtResource("6_o3ilr")
 
 [connection signal="mouse_entered" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_exited"]

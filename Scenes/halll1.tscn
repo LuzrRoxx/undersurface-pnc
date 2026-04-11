@@ -3,9 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://bblj8bdp3j0h2" path="res://Art/hallL1.png" id="1_xklv8"]
 [ext_resource type="Script" uid="uid://csc303e66qp6b" path="res://Scripts/reusablebutton1.gd" id="2_r7icp"]
 [ext_resource type="PackedScene" uid="uid://0jg2vasolu41" path="res://Scenes/Asset Scenes/cameraBasic.tscn" id="3_ymskh"]
+[ext_resource type="PackedScene" uid="uid://mc8km7ngsulg" path="res://escMenu.tscn" id="4_t7te7"]
+[ext_resource type="Texture2D" uid="uid://smn30lgi5knp" path="res://Art/arrow.png" id="5_kw2vq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vui4g"]
 size = Vector2(87.09459, 18.017)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kw2vq"]
+size = Vector2(23.45203, 12.691219)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdjm1"]
+size = Vector2(23.724201, 23.68272)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kw2vq"]
+load_path = "res://.godot/imported/arrow.png-c1b95b0b59ab99a73c8e4d0c7d511212.ctex"
 
 [node name="Node2D" type="Node2D" unique_id=627571783]
 
@@ -19,14 +30,58 @@ scale = Vector2(22.045, 8.825)
 
 [node name="Area2D" type="Area2D" parent="button2" unique_id=152250001]
 script = ExtResource("2_r7icp")
-target_scene = "res://Scenes/bar1.tscn"
+target_scene = "res://Scenes/hallenter.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button2/Area2D" unique_id=1949538361]
 position = Vector2(29.43978, 90.141655)
 shape = SubResource("RectangleShape2D_vui4g")
 
+[node name="button3" type="Node2D" parent="." unique_id=755975884]
+position = Vector2(311, 205)
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" type="Area2D" parent="button3" unique_id=1532431547]
+script = ExtResource("2_r7icp")
+target_scene = "res://ladder.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button3/Area2D" unique_id=114769711]
+position = Vector2(42.43592, 16.770538)
+shape = SubResource("RectangleShape2D_kw2vq")
+
+[node name="button4" type="Node2D" parent="." unique_id=429373016]
+position = Vector2(311, 205)
+scale = Vector2(22.045, 8.825)
+
+[node name="Area2D" type="Area2D" parent="button4" unique_id=2089001733]
+script = ExtResource("2_r7icp")
+target_scene = "res://Scenes/hallenter.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button4/Area2D" unique_id=1561531689]
+position = Vector2(29.870718, 39.036827)
+shape = SubResource("RectangleShape2D_hdjm1")
+
 [node name="Camera2D" parent="." unique_id=1663485095 instance=ExtResource("3_ymskh")]
 position = Vector2(960, 540)
 
+[node name="Control" parent="." unique_id=1446918178 instance=ExtResource("4_t7te7")]
+anchors_preset = 15
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1769680576]
+position = Vector2(960, 1001)
+rotation = -3.1415925
+texture = ExtResource("5_kw2vq")
+
+[node name="Arrow2" type="Sprite2D" parent="." unique_id=1786119953]
+position = Vector2(1158, 353)
+texture = SubResource("CompressedTexture2D_kw2vq")
+
+[node name="Arrow3" type="Sprite2D" parent="." unique_id=1163085385]
+position = Vector2(961, 626)
+texture = ExtResource("5_kw2vq")
+
 [connection signal="mouse_entered" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="button2/Area2D" to="button2/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="button3/Area2D" to="button3/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="button3/Area2D" to="button3/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="button4/Area2D" to="button4/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="button4/Area2D" to="button4/Area2D" method="_on_mouse_exited"]
